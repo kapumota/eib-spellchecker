@@ -3,6 +3,10 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+import pytest
+
+pytest.importorskip("torch", reason="PyTorch no está instalado, se omiten tests del backend torch")
+
 from eib_spellchecker.config import load_config
 from eib_spellchecker.inference.service import ArtifactSpellChecker
 from eib_spellchecker.training.torch_reranker import train_torch_reranker_model
