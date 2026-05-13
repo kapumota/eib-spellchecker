@@ -119,7 +119,7 @@ Si este comando funciona, la ruta principal de inferencia está operativa.
 
 #### 8. Endpoint de prueba
 
-Con la API levantada:
+Con la API levantada haz lo siguiente:
 
 ```bash
 curl -X POST http://127.0.0.1:8000/correct \
