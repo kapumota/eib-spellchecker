@@ -1,0 +1,46 @@
+{
+  "slug": "subword-segmentacion-subword-bpe-ya-bpe-5k-5k",
+  "source_zip": "subword_segmentacion.zip",
+  "language_code": "ya",
+  "language": "Yanesha'",
+  "family": "subword-bpe",
+  "variant": "bpe_5k",
+  "run_dir": "subword_segmentacion/bpe/common_data/yane/5k",
+  "weights_path": "subword_segmentacion/bpe/common_data/yane/5k/model_ya_46_bpe_5k_kd.h5",
+  "candidates_path": "subword_segmentacion/bpe/common_data/yane/5k/candidatos.txt",
+  "reference_path": "subword_segmentacion/bpe/common_data/yane/5k/referencia.txt",
+  "test_input_path": "subword_segmentacion/bpe/common_data/yane/5k/x_test_5k.bpe",
+  "test_output_path": "subword_segmentacion/bpe/common_data/yane/5k/y_test_5k.bpe",
+  "vocab_path": "subword_segmentacion/bpe/common_data/yane/5k/yane_5k.vocab",
+  "model_summary": {
+    "keras_version": "2.3.1",
+    "backend": "tensorflow",
+    "input_length": 46,
+    "encoder_input_dim": 30,
+    "decoder_input_dim": 32,
+    "lstm_units": 64,
+    "output_dim": 30,
+    "layer_names": [
+      "input_4",
+      "input_3",
+      "embedding_4",
+      "embedding_3",
+      "lstm_4",
+      "lstm_3",
+      "dot_3",
+      "atention",
+      "dot_4",
+      "concatenate_2",
+      "time_distributed_3",
+      "time_distributed_4"
+    ]
+  },
+  "extracted_files": {
+    "weights": "model_ya_46_bpe_5k_kd.h5",
+    "candidates": "candidatos.txt",
+    "reference": "referencia.txt",
+    "test_input": "x_test_5k.bpe",
+    "test_output": "y_test_5k.bpe",
+    "vocab": "yane_5k.vocab"
+  }
+}

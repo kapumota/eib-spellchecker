@@ -1,0 +1,20 @@
+{
+  "slug": "aumento-datos-seq2seq-attention-shi-syllable-shipibo46",
+  "source_zip": "aumento_datos.zip",
+  "language_code": "shi",
+  "language": "Shipibo-Konibo",
+  "family": "seq2seq-attention",
+  "variant": "syllable",
+  "run_dir": "aumento_datos/syllable_data/seq2seq+atencion/Shipibo46",
+  "weights_path": null,
+  "candidates_path": "aumento_datos/syllable_data/seq2seq+atencion/Shipibo46/candidatos.txt",
+  "reference_path": "aumento_datos/syllable_data/seq2seq+atencion/Shipibo46/referencia.txt",
+  "test_input_path": null,
+  "test_output_path": null,
+  "vocab_path": null,
+  "model_summary": null,
+  "extracted_files": {
+    "candidates": "candidatos.txt",
+    "reference": "referencia.txt"
+  }
+}

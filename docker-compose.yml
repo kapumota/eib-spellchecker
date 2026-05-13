@@ -1,0 +1,18 @@
+services:
+  eib-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      EIB_ARTIFACT_DIR: /app/artifacts/lexical/ash
+    ports:
+      - "8000:8000"
+
+  eib-api-torch:
+    build:
+      context: .
+      dockerfile: Dockerfile.torch
+    environment:
+      EIB_ARTIFACT_DIR: /app/artifacts/torch/demo
+    ports:
+      - "8001:8000"

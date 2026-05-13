@@ -1,0 +1,43 @@
+{
+  "language": "demo",
+  "pairs": 3,
+  "examples": 9,
+  "train_examples": 7,
+  "validation_examples": 2,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.6813596997942243,
+      "val_loss": 0.633277177810669
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.6493800708225795,
+      "val_loss": 0.5915939211845398
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.5956623128482273,
+      "val_loss": 0.5910059213638306
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.5374320191996438,
+      "val_loss": 0.5906479358673096
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.48452129534312655,
+      "val_loss": 0.5911170840263367
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.4275876794542585,
+      "val_loss": 0.6194079518318176
+    }
+  ],
+  "best_val_loss": 0.5906479358673096,
+  "pair_files": [
+    "examples/demo_pairs.tsv"
+  ]
+}

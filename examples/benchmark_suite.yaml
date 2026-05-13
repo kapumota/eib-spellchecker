@@ -1,0 +1,7 @@
+datasets:
+  - language: Asháninka
+    dataset: /absolute/path/common_data_ash.csv
+    format: csv
+  - language: Yanesha'
+    dataset: /absolute/path/common_data_ya.csv
+    format: csv

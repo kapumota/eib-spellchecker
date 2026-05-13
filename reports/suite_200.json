@@ -1,0 +1,159 @@
+{
+  "datasets": [
+    {
+      "language_code": "ash",
+      "language": "Asháninka",
+      "variant": "common",
+      "dataset_path": "common_data_ash.csv",
+      "artifact_dir": "lexical/ash",
+      "total_examples": 200,
+      "exact_match_accuracy": 0.28,
+      "token_accuracy": 0.6404786680541104,
+      "cer_before": 0.1281656956276399,
+      "cer_after": 0.12039124064731851,
+      "cer_improvement": 0.06065940610901482
+    },
+    {
+      "language_code": "ya",
+      "language": "Yanesha'",
+      "variant": "common",
+      "dataset_path": "common_data_ya.csv",
+      "artifact_dir": "lexical/ya",
+      "total_examples": 200,
+      "exact_match_accuracy": 0.1,
+      "token_accuracy": 0.6240437158469946,
+      "cer_before": 0.06623710705569799,
+      "cer_after": 0.1173218698649727,
+      "cer_improvement": -0.7712408509374986
+    },
+    {
+      "language_code": "ash",
+      "language": "Asháninka",
+      "variant": "keyboard",
+      "dataset_path": "keyboard_data_ash.csv",
+      "artifact_dir": "lexical/ash",
+      "total_examples": 200,
+      "exact_match_accuracy": 0.325,
+      "token_accuracy": 0.8612466124661247,
+      "cer_before": 0.04506992790784392,
+      "cer_after": 0.021539096955068157,
+      "cer_improvement": 0.5220960415310645
+    },
+    {
+      "language_code": "shi",
+      "language": "Shipibo-Konibo",
+      "variant": "keyboard",
+      "dataset_path": "keyboard_data_shi.csv",
+      "artifact_dir": "lexical/shi",
+      "total_examples": 200,
+      "exact_match_accuracy": 0.375,
+      "token_accuracy": 0.7379084967320262,
+      "cer_before": 0.06988622155513999,
+      "cer_after": 0.04080162809322061,
+      "cer_improvement": 0.4161706387141238
+    },
+    {
+      "language_code": "ya",
+      "language": "Yanesha'",
+      "variant": "keyboard",
+      "dataset_path": "keyboard_data_ya.csv",
+      "artifact_dir": "lexical/ya",
+      "total_examples": 200,
+      "exact_match_accuracy": 0.13,
+      "token_accuracy": 0.6360655737704918,
+      "cer_before": 0.046991973811544484,
+      "cer_after": 0.12412657233346351,
+      "cer_improvement": -1.641441979672057
+    },
+    {
+      "language_code": "yi",
+      "language": "Yine",
+      "variant": "keyboard",
+      "dataset_path": "keyboard_data_yi.csv",
+      "artifact_dir": "lexical/yi",
+      "total_examples": 200,
+      "exact_match_accuracy": 0.485,
+      "token_accuracy": 0.8566666666666667,
+      "cer_before": 0.060430500026821835,
+      "cer_after": 0.024930469364765097,
+      "cer_improvement": 0.5874522078470341
+    },
+    {
+      "language_code": "shi",
+      "language": "Shipibo-Konibo",
+      "variant": "syllable",
+      "dataset_path": "syllable_data_shi.csv",
+      "artifact_dir": "lexical/shi",
+      "total_examples": 200,
+      "exact_match_accuracy": 0.09,
+      "token_accuracy": 0.5470588235294118,
+      "cer_before": 0.14235850728711566,
+      "cer_after": 0.10958312463700925,
+      "cer_improvement": 0.23023128912136875
+    },
+    {
+      "language_code": "ya",
+      "language": "Yanesha'",
+      "variant": "syllable",
+      "dataset_path": "syllable_data_ya.csv",
+      "artifact_dir": "lexical/ya",
+      "total_examples": 200,
+      "exact_match_accuracy": 0.045,
+      "token_accuracy": 0.40575916230366493,
+      "cer_before": 0.11416997631226203,
+      "cer_after": 0.21585245536178846,
+      "cer_improvement": -0.8906236327089925
+    },
+    {
+      "language_code": "yi",
+      "language": "Yine",
+      "variant": "syllable",
+      "dataset_path": "syllable_data_yi.csv",
+      "artifact_dir": "lexical/yi",
+      "total_examples": 200,
+      "exact_match_accuracy": 0.24,
+      "token_accuracy": 0.7141666666666666,
+      "cer_before": 0.12359234878394741,
+      "cer_after": 0.08764783508105799,
+      "cer_improvement": 0.2908312209983505
+    }
+  ],
+  "summary": {
+    "num_datasets": 9,
+    "languages": [
+      "Asháninka",
+      "Shipibo-Konibo",
+      "Yanesha'",
+      "Yine"
+    ],
+    "avg_exact_match_accuracy": 0.22999999999999998,
+    "avg_token_accuracy": 0.6692660428929064,
+    "avg_cer_improvement": -0.1328739621108435,
+    "best_dataset_by_exact_match": {
+      "language_code": "yi",
+      "language": "Yine",
+      "variant": "keyboard",
+      "dataset_path": "keyboard_data_yi.csv",
+      "artifact_dir": "lexical/yi",
+      "total_examples": 200,
+      "exact_match_accuracy": 0.485,
+      "token_accuracy": 0.8566666666666667,
+      "cer_before": 0.060430500026821835,
+      "cer_after": 0.024930469364765097,
+      "cer_improvement": 0.5874522078470341
+    },
+    "best_dataset_by_cer_improvement": {
+      "language_code": "yi",
+      "language": "Yine",
+      "variant": "keyboard",
+      "dataset_path": "keyboard_data_yi.csv",
+      "artifact_dir": "lexical/yi",
+      "total_examples": 200,
+      "exact_match_accuracy": 0.485,
+      "token_accuracy": 0.8566666666666667,
+      "cer_before": 0.060430500026821835,
+      "cer_after": 0.024930469364765097,
+      "cer_improvement": 0.5874522078470341
+    }
+  }
+}

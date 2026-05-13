@@ -1,0 +1,190 @@
+{
+  "total_examples": 200,
+  "exact_match_accuracy": 0.375,
+  "token_accuracy": 0.7379084967320262,
+  "cer_before": 0.06988622155513999,
+  "cer_after": 0.04080162809322061,
+  "cer_improvement": 0.4161706387141238,
+  "examples": [
+    {
+      "noisy": "ahbanon",
+      "gold": "abanon",
+      "predicted": "abanon",
+      "changed_tokens": 1,
+      "exact_match": true,
+      "cer_before": 0.16666666666666666,
+      "cer_after": 0.0
+    },
+    {
+      "noisy": "abanin",
+      "gold": "abanon",
+      "predicted": "abanon",
+      "changed_tokens": 1,
+      "exact_match": true,
+      "cer_before": 0.16666666666666666,
+      "cer_after": 0.0
+    },
+    {
+      "noisy": "abanon",
+      "gold": "abanon",
+      "predicted": "abanon",
+      "changed_tokens": 0,
+      "exact_match": true,
+      "cer_before": 0.0,
+      "cer_after": 0.0
+    },
+    {
+      "noisy": "abanon",
+      "gold": "abanon",
+      "predicted": "abanon",
+      "changed_tokens": 0,
+      "exact_match": true,
+      "cer_before": 0.0,
+      "cer_after": 0.0
+    },
+    {
+      "noisy": "banon",
+      "gold": "abanon",
+      "predicted": "binon",
+      "changed_tokens": 1,
+      "exact_match": false,
+      "cer_before": 0.16666666666666666,
+      "cer_after": 0.3333333333333333
+    },
+    {
+      "noisy": "abano bari riosen oinkin uixon",
+      "gold": "abanon bari riosen oinkin ixon",
+      "predicted": "abanon bari riosen oinkin ixon",
+      "changed_tokens": 2,
+      "exact_match": true,
+      "cer_before": 0.06666666666666667,
+      "cer_after": 0.0
+    },
+    {
+      "noisy": "abanon bati riosen oinnkin ixin",
+      "gold": "abanon bari riosen oinkin ixon",
+      "predicted": "abanon biti riosen oinkin ixon",
+      "changed_tokens": 3,
+      "exact_match": false,
+      "cer_before": 0.1,
+      "cer_after": 0.06666666666666667
+    },
+    {
+      "noisy": "abwnon bari riozsen oinkln ixon",
+      "gold": "abanon bari riosen oinkin ixon",
+      "predicted": "abanon bari riozsen oinkin ixon",
+      "changed_tokens": 2,
+      "exact_match": false,
+      "cer_before": 0.1,
+      "cer_after": 0.03333333333333333
+    },
+    {
+      "noisy": "abanohn bai riosen oinkin ixo",
+      "gold": "abanon bari riosen oinkin ixon",
+      "predicted": "abanon bai riosen oinkin ixo",
+      "changed_tokens": 1,
+      "exact_match": false,
+      "cer_before": 0.1,
+      "cer_after": 0.06666666666666667
+    },
+    {
+      "noisy": "abanon bbari iosen oinkin ixon",
+      "gold": "abanon bari riosen oinkin ixon",
+      "predicted": "abanon bari isin oinkin ixon",
+      "changed_tokens": 2,
+      "exact_match": false,
+      "cer_before": 0.06666666666666667,
+      "cer_after": 0.1
+    },
+    {
+      "noisy": "a b ch e w j k km n ko p  s ramabicharii shinanrlbikana iki wetsatin nawabaon kakinabo ñokobotanaibaon ishton wishtikoma uketian sh aishati tsosakan toan ai zx ramakamanbi naton atibirea akain nonwisaai iitzi",
+      "gold": "a b ch e w j k m n o p r s ramabicharibi shinanribikana iki wetsatian nawabaon makinabo pokobotanaibaon ishton wishatikoma iketian sh wishati tsosakan toan ati x ramakamanbi naton atibires akain nonwishaai iitai",
+      "predicted": "a b ch e w j k km n ko p  s ramabicharibi shinanribikana iki wetsatian nawabaon kakinbi pokobotanaibaon ishton wishatikoma iketian sh ashpati tsosakan toan ai zx ramakamanbi naton atibires akain nonwishaai iitzi",
+      "changed_tokens": 10,
+      "exact_match": false,
+      "cer_before": 0.07582938388625593,
+      "cer_after": 0.05687203791469194
+    },
+    {
+      "noisy": "b cg ee q m j m n o  r s ramabicharkibi shianribikana ikki wetsatian nawabaon makinabo pokobotanaibaon ishton wishatikoma iketian sj wishati tsosakan foan agti x ranakamanbi hnaton tibires zkain nonwishaai itai",
+      "gold": "a b ch e w j k m n o p r s ramabicharibi shinanribikana iki wetsatian nawabaon makinabo pokobotanaibaon ishton wishatikoma iketian sh wishati tsosakan toan ati x ramakamanbi naton atibires akain nonwishaai iitai",
+      "predicted": "b cg ee q m j m n o  r s ramabicharibi shinanribikana iki wetsatian nawabaon makinabo pokobotanaibaon ishton wishatikoma iketian sj wishati tsosakan toan ati x ramakamanbi naton teebires zkain nonwishaai itai",
+      "changed_tokens": 8,
+      "exact_match": false,
+      "cer_before": 0.09004739336492891,
+      "cer_after": 0.06635071090047394
+    },
+    {
+      "noisy": "qa b vch e d j k m n o p  s ramabicharibi shinanribikana ki wetsatian nawabaon makinabo pokobotanaibaon ishton wishatikonma ietian sh wishati tsosakan toan afi  ramakamanbi naton atibirses akxain nonwishaa iitqai",
+      "gold": "a b ch e w j k m n o p r s ramabicharibi shinanribikana iki wetsatian nawabaon makinabo pokobotanaibaon ishton wishatikoma iketian sh wishati tsosakan toan ati x ramakamanbi naton atibires akain nonwishaai iitai",
+      "predicted": "qa b vch e d j k m n o p  s ramabicharibi shinanribikana ki wetsatian nawabaon makinabo pokobotanaibaon ishton wishatikoma iketian sh wishati tsosakan toan ati  ramakamanbi naton atibires akain nonwishaai iitqai",
+      "changed_tokens": 6,
+      "exact_match": false,
+      "cer_before": 0.061611374407582936,
+      "cer_after": 0.03317535545023697
+    },
+    {
+      "noisy": "gb ch  w j k m n  p r s ramavbicharibi shinanribikana jki wetsatia nawabaon makinabo pokobotanauibaon ishtln wishatikoma iketian sh wishatji tsosakan oan ati  ramakamani nahton xatibires akin nonwishaai iitai",
+      "gold": "a b ch e w j k m n o p r s ramabicharibi shinanribikana iki wetsatian nawabaon makinabo pokobotanaibaon ishton wishatikoma iketian sh wishati tsosakan toan ati x ramakamanbi naton atibires akain nonwishaai iitai",
+      "predicted": "gb ch  w j k m n  p r s ramavbicharibi shinanribikana joi wetsatian nawabaon makinabo pokobotanaibaon ishton wishatikoma iketian sh wishati tsosakan onan ati  ramakamanbi naton xatebires akin nonwishaai iitai",
+      "changed_tokens": 9,
+      "exact_match": false,
+      "cer_before": 0.07582938388625593,
+      "cer_after": 0.061611374407582936
+    },
+    {
+      "noisy": "z b ch e q mj   bn l p r  ramabicharibi shinanrbikana iki wetstian nawabaon makinzabo pokobotanaibaon ishton wishatikoma iketian h wishati tsosakan toan atji x ramakaamanbi naton atibires aain nnwishaai itai",
+      "gold": "a b ch e w j k m n o p r s ramabicharibi shinanribikana iki wetsatian nawabaon makinabo pokobotanaibaon ishton wishatikoma iketian sh wishati tsosakan toan ati x ramakamanbi naton atibires akain nonwishaai iitai",
+      "predicted": "z b ch e q mj   bn l p r  ramabicharibi shinanribikana iki wetsatian nawabaon makinzabo pokobotanaibaon ishton wishatikoma iketian h wishati tsosakan toan ati x ramakamanbi naton atibires akin nonwishaai itai",
+      "changed_tokens": 6,
+      "exact_match": false,
+      "cer_before": 0.08056872037914692,
+      "cer_after": 0.05687203791469194
+    },
+    {
+      "noisy": "aion paketa abion nojn jeman paketa namata riki non ocomakea kabo mawa inti",
+      "gold": "abion paketa abion non jeman paketa namata riki non ochomakea kaibo mawa ointi",
+      "predicted": "axon paketa abion non jeman paketa namata riki non ochomakea kabo mawa iti",
+      "changed_tokens": 4,
+      "exact_match": false,
+      "cer_before": 0.0641025641025641,
+      "cer_after": 0.0641025641025641
+    },
+    {
+      "noisy": "abion pajeta aion non jemzan pakets namta rki non ochomakea kaibp mswa inti",
+      "gold": "abion paketa abion non jeman paketa namata riki non ochomakea kaibo mawa ointi",
+      "predicted": "abion paketa axon non jemzan paketa namia riki non ochomakea kaibo mawa iti",
+      "changed_tokens": 8,
+      "exact_match": false,
+      "cer_before": 0.11538461538461539,
+      "cer_after": 0.08974358974358974
+    },
+    {
+      "noisy": "wabion pxaketa abion non jeman psketa naata iki nn ochomakea kaibo kmawa ointi",
+      "gold": "abion paketa abion non jeman paketa namata riki non ochomakea kaibo mawa ointi",
+      "predicted": "wain paketa abion non jeman paketa namata iki nn ochomakea kaibo kawa ointi",
+      "changed_tokens": 5,
+      "exact_match": false,
+      "cer_before": 0.08974358974358974,
+      "cer_after": 0.07692307692307693
+    },
+    {
+      "noisy": "avbion paketa abion non jeman paketa namata rimki nkon ochomakea kaibo mawa oini",
+      "gold": "abion paketa abion non jeman paketa namata riki non ochomakea kaibo mawa ointi",
+      "predicted": "avbion paketa abion non jeman paketa namata riki non ochomakea kaibo mawa oini",
+      "changed_tokens": 2,
+      "exact_match": false,
+      "cer_before": 0.05128205128205128,
+      "cer_after": 0.02564102564102564
+    },
+    {
+      "noisy": "abionn paketa abion jnon jean paketa namata iki mnon ochomakea kaiblo maawa ointi",
+      "gold": "abion paketa abion non jeman paketa namata riki non ochomakea kaibo mawa ointi",
+      "predicted": "abion paketa abion jonon jan paketa namata iki manon ochomakea kaibo mawa ointi",
+      "changed_tokens": 6,
+      "exact_match": false,
+      "cer_before": 0.08974358974358974,
+      "cer_after": 0.08974358974358974
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "artifact_version": "2",
+  "backend": "lexical",
+  "language": "ash",
+  "entrypoint": "eib_spellchecker.modeling.lexical:LexicalSpellChecker",
+  "payload_file": "model.json",
+  "metadata_file": null
+}

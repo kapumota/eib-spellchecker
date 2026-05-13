@@ -1,0 +1,46 @@
+{
+  "slug": "subword-segmentacion-subword-bpe-ash-bpe-5k-5k",
+  "source_zip": "subword_segmentacion.zip",
+  "language_code": "ash",
+  "language": "Asháninka",
+  "family": "subword-bpe",
+  "variant": "bpe_5k",
+  "run_dir": "subword_segmentacion/bpe/common_data/asha/5k",
+  "weights_path": "subword_segmentacion/bpe/common_data/asha/5k/model_asha_46_bpe_5k_kd.h5",
+  "candidates_path": "subword_segmentacion/bpe/common_data/asha/5k/candidatos.txt",
+  "reference_path": "subword_segmentacion/bpe/common_data/asha/5k/referencia.txt",
+  "test_input_path": "subword_segmentacion/bpe/common_data/asha/5k/x_test_5k.bpe",
+  "test_output_path": "subword_segmentacion/bpe/common_data/asha/5k/y_test_5k.bpe",
+  "vocab_path": "subword_segmentacion/bpe/common_data/asha/5k/asha_5k.vocab",
+  "model_summary": {
+    "keras_version": "2.3.1",
+    "backend": "tensorflow",
+    "input_length": 46,
+    "encoder_input_dim": 24,
+    "decoder_input_dim": 28,
+    "lstm_units": 64,
+    "output_dim": 24,
+    "layer_names": [
+      "input_2",
+      "input_1",
+      "embedding_2",
+      "embedding_1",
+      "lstm_2",
+      "lstm_1",
+      "dot_1",
+      "atention",
+      "dot_2",
+      "concatenate_1",
+      "time_distributed_1",
+      "time_distributed_2"
+    ]
+  },
+  "extracted_files": {
+    "weights": "model_asha_46_bpe_5k_kd.h5",
+    "candidates": "candidatos.txt",
+    "reference": "referencia.txt",
+    "test_input": "x_test_5k.bpe",
+    "test_output": "y_test_5k.bpe",
+    "vocab": "asha_5k.vocab"
+  }
+}

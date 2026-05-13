@@ -1,0 +1,190 @@
+{
+  "total_examples": 200,
+  "exact_match_accuracy": 0.325,
+  "token_accuracy": 0.8612466124661247,
+  "cer_before": 0.04506992790784392,
+  "cer_after": 0.021539096955068157,
+  "cer_improvement": 0.5220960415310645,
+  "examples": [
+    {
+      "noisy": "aabintiro kantashiyetachari mantsiyarentsipe iraqhi shirampari okimetatya katsitsinetaahntsi aisati aiorika okantaje itsintaje",
+      "gold": "aabintiro kantashiyetachari mantsiyarentsipe irashi shirampari okimetatya katsitsinetaantsi aisati airorika okantaje itsintaje",
+      "predicted": "aabintiro kantashiyetachari mantsiyarentsipe iraqhi shirampari okimetatya katsitsinetaantsi aisati ariorika okantaje itsintaje",
+      "changed_tokens": 2,
+      "exact_match": false,
+      "cer_before": 0.023809523809523808,
+      "cer_after": 0.023809523809523808
+    },
+    {
+      "noisy": "zaabintiro kantashiyetahari mantsiyarentsipe idashi shirampari okimetata katsitsineetaantsi aisati airorima okantaje itsintaje",
+      "gold": "aabintiro kantashiyetachari mantsiyarentsipe irashi shirampari okimetatya katsitsinetaantsi aisati airorika okantaje itsintaje",
+      "predicted": "zaabintiro kantashiyetachari mantsiyarentsipe irashi shirampari okimetatya katsitsinetaantsi aisati airorika okantaje itsintaje",
+      "changed_tokens": 5,
+      "exact_match": false,
+      "cer_before": 0.047619047619047616,
+      "cer_after": 0.007936507936507936
+    },
+    {
+      "noisy": "aabontiro kantashiytachari mantsiyaentsipe irashi shirampari okimetata katsirtsinetaantsi akisati airodrika okantaje itsintaje",
+      "gold": "aabintiro kantashiyetachari mantsiyarentsipe irashi shirampari okimetatya katsitsinetaantsi aisati airorika okantaje itsintaje",
+      "predicted": "aabintiro kantashiyetachari mantsiyarentsipe irashi shirampari okimetatya katsitsinetaantsi aisati airorika okantaje itsintaje",
+      "changed_tokens": 7,
+      "exact_match": true,
+      "cer_before": 0.05555555555555555,
+      "cer_after": 0.0
+    },
+    {
+      "noisy": "aabintiro kantashiyetachari mantsiyarentsipe irashi sirampari okimetatya katsitsinetaantsi zaisati airoruika okantje itsintaje",
+      "gold": "aabintiro kantashiyetachari mantsiyarentsipe irashi shirampari okimetatya katsitsinetaantsi aisati airorika okantaje itsintaje",
+      "predicted": "aabintiro kantashiyetachari mantsiyarentsipe irashi shirampari okimetatya katsitsinetaantsi zaisati airorika okantaje itsintaje",
+      "changed_tokens": 3,
+      "exact_match": false,
+      "cer_before": 0.031746031746031744,
+      "cer_after": 0.007936507936507936
+    },
+    {
+      "noisy": "aabintiro kantashiyetachari mantsiyarentsip urashi sshirampari okimetstya katsjtsinetaantsi asati airodika okantaje itsintaje",
+      "gold": "aabintiro kantashiyetachari mantsiyarentsipe irashi shirampari okimetatya katsitsinetaantsi aisati airorika okantaje itsintaje",
+      "predicted": "aabintiro kantashiyetachari mantsiyarentsi irashi shirampari okimetatya katsitsinetaantsi aisati airorika okantaje itsintaje",
+      "changed_tokens": 7,
+      "exact_match": false,
+      "cer_before": 0.05555555555555555,
+      "cer_after": 0.015873015873015872
+    },
+    {
+      "noisy": "aabintiro kxantashiyetachari pirotsipaye shitobatsiri ameshinaki",
+      "gold": "aabintiro kantashiyetachari pirotsipaye shitobatsiri ameshinaki",
+      "predicted": "aabintiro kantashiyetachari pirotsipaye shitobatsiri ameshinaki",
+      "changed_tokens": 1,
+      "exact_match": true,
+      "cer_before": 0.015873015873015872,
+      "cer_after": 0.0
+    },
+    {
+      "noisy": "aabintiro kantashiyetachari pirotsipaye shitobatsiri ameshnaki",
+      "gold": "aabintiro kantashiyetachari pirotsipaye shitobatsiri ameshinaki",
+      "predicted": "aabintiro kantashiyetachari pirotsipaye shitobatsiri ameshinaki",
+      "changed_tokens": 1,
+      "exact_match": true,
+      "cer_before": 0.015873015873015872,
+      "cer_after": 0.0
+    },
+    {
+      "noisy": "aabintieo kantzashiyetachari pirotsipaye suhitobatsiri meshinaki",
+      "gold": "aabintiro kantashiyetachari pirotsipaye shitobatsiri ameshinaki",
+      "predicted": "aabintiro kantashiyetachari pirotsipaye shitobatsiri meshaki",
+      "changed_tokens": 4,
+      "exact_match": false,
+      "cer_before": 0.06349206349206349,
+      "cer_after": 0.047619047619047616
+    },
+    {
+      "noisy": "aabiintiro kantashiyetachari pirotsipaye shitobatsiri ameshinaki",
+      "gold": "aabintiro kantashiyetachari pirotsipaye shitobatsiri ameshinaki",
+      "predicted": "aabintiro kantashiyetachari pirotsipaye shitobatsiri ameshinaki",
+      "changed_tokens": 1,
+      "exact_match": true,
+      "cer_before": 0.015873015873015872,
+      "cer_after": 0.0
+    },
+    {
+      "noisy": "aabintiro kantashiyetachari pirotsipaye shitobatsiri ameshinaki",
+      "gold": "aabintiro kantashiyetachari pirotsipaye shitobatsiri ameshinaki",
+      "predicted": "aabintiro kantashiyetachari pirotsipaye shitobatsiri ameshinaki",
+      "changed_tokens": 0,
+      "exact_match": true,
+      "cer_before": 0.0,
+      "cer_after": 0.0
+    },
+    {
+      "noisy": "aabintirro pashinipaye mantsiyarentsi kemitahari kempetachri amantsi kaintantsi kajentanhsi ankatsiterka abata anchfekiarika qntsekakerika oshitobikari odsokijakeri irauani",
+      "gold": "aabintiro pashinipaye mantsiyarentsi kemitachari kempetachari kamantsi kaintantsi kajentantsi ankatsiterika abatsa anchekiarika antsekakerika oshitobikari osokijakeri irajani",
+      "predicted": "aabintiro pashinipaye mantsiyarentsi kemitachari kempetachari añantsi kaintantsi kajentantsi ankatsiterika abatsa anchfekiarika qntsekakerika oshitobikari osokijakeri irajani",
+      "changed_tokens": 9,
+      "exact_match": false,
+      "cer_before": 0.06321839080459771,
+      "cer_after": 0.022988505747126436
+    },
+    {
+      "noisy": "aabintiro pashinipaye mantsiyarentsi kemitachadri kempetachari kamantsi kaintantsi kauentantsi ankatsiterika abatsa anchekiarika anntsekakerika ositobikari osokijqakeri irajani",
+      "gold": "aabintiro pashinipaye mantsiyarentsi kemitachari kempetachari kamantsi kaintantsi kajentantsi ankatsiterika abatsa anchekiarika antsekakerika oshitobikari osokijakeri irajani",
+      "predicted": "aabintiro pashinipaye mantsiyarentsi kemitachari kempetachari kamantsi kaintantsi kajentantsi ankatsiterika abatsa anchekiarika antsekakerika oshitobikari osokijqakeri irajani",
+      "changed_tokens": 4,
+      "exact_match": false,
+      "cer_before": 0.028735632183908046,
+      "cer_after": 0.005747126436781609
+    },
+    {
+      "noisy": "aabitiro paashinipaye mantsiyarentsi kemitachari krmpetachari kamantsi kaintantsi kajentantsi ankatsiterika abasa anchekiarimka antsekkerika oshitobikari osokijakeri irajni",
+      "gold": "aabintiro pashinipaye mantsiyarentsi kemitachari kempetachari kamantsi kaintantsi kajentantsi ankatsiterika abatsa anchekiarika antsekakerika oshitobikari osokijakeri irajani",
+      "predicted": "aabintiro pashinipaye mantsiyarentsi kemitachari kempetachari kamantsi kaintantsi kajentantsi ankatsiterika abatsa anchekiarika antsekakerika oshitobikari osokijakeri iraji",
+      "changed_tokens": 7,
+      "exact_match": false,
+      "cer_before": 0.040229885057471264,
+      "cer_after": 0.011494252873563218
+    },
+    {
+      "noisy": "aabintiro pashinipaye mxntsiyarentsi kemitachari kempetacyari kamamntsi kaintantsi kajentantsi ankatsiterika abatsa anchekiarika atsekakerika oeshitobikari sokijakeri irajani",
+      "gold": "aabintiro pashinipaye mantsiyarentsi kemitachari kempetachari kamantsi kaintantsi kajentantsi ankatsiterika abatsa anchekiarika antsekakerika oshitobikari osokijakeri irajani",
+      "predicted": "aabintiro pashinipaye mantsiyarentsi kemitachari kempetachari kamantsi kaintantsi kajentantsi ankatsiterika abatsa anchekiarika antsekakerika oshitobikari sokijake irajani",
+      "changed_tokens": 6,
+      "exact_match": false,
+      "cer_before": 0.034482758620689655,
+      "cer_after": 0.017241379310344827
+    },
+    {
+      "noisy": "aabijtiro pqshinipaye mantsiyarentsi kemitachari kempetachari kamatsi kaintantsi kajentantsj ankatsiterika aatsa anchekiarika xantsekakerika oshitobikari osokijakeri irajani",
+      "gold": "aabintiro pashinipaye mantsiyarentsi kemitachari kempetachari kamantsi kaintantsi kajentantsi ankatsiterika abatsa anchekiarika antsekakerika oshitobikari osokijakeri irajani",
+      "predicted": "aabintiro pqshinipaye mantsiyarentsi kemitachari kempetachari kamantsi kaintantsi kajentantsi ankatsiterika abatsa anchekiarika antsekakerika oshitobikari osokijakeri irajani",
+      "changed_tokens": 5,
+      "exact_match": false,
+      "cer_before": 0.034482758620689655,
+      "cer_after": 0.005747126436781609
+    },
+    {
+      "noisy": "aajro tsikammentotsi iramaityaro abintarontsi totoricheki",
+      "gold": "aajero tsikamentotsi iramaityaro abintarontsi tontoricheki",
+      "predicted": "aajero tsikamentotsi iramaityaro abintarontsi tontoricheki",
+      "changed_tokens": 3,
+      "exact_match": true,
+      "cer_before": 0.05172413793103448,
+      "cer_after": 0.0
+    },
+    {
+      "noisy": "aajero tsikmentotsi iramaityaro abintarntsi tontoricheki",
+      "gold": "aajero tsikamentotsi iramaityaro abintarontsi tontoricheki",
+      "predicted": "aajero tsikamentotsi iramaityaro abintarontsi tontoricheki",
+      "changed_tokens": 2,
+      "exact_match": true,
+      "cer_before": 0.034482758620689655,
+      "cer_after": 0.0
+    },
+    {
+      "noisy": "aanero tsikamentotsi iramaityar abintarontsi tontoricheki",
+      "gold": "aajero tsikamentotsi iramaityaro abintarontsi tontoricheki",
+      "predicted": "aakero tsikamentotsi iramaityaro abintarontsi tontoricheki",
+      "changed_tokens": 2,
+      "exact_match": false,
+      "cer_before": 0.034482758620689655,
+      "cer_after": 0.017241379310344827
+    },
+    {
+      "noisy": "aajer tsikamentotsi irmaityaro abintarontsi tontoricheki",
+      "gold": "aajero tsikamentotsi iramaityaro abintarontsi tontoricheki",
+      "predicted": "aajero tsikamentotsi iramaityaro abintarontsi tontoricheki",
+      "changed_tokens": 2,
+      "exact_match": true,
+      "cer_before": 0.034482758620689655,
+      "cer_after": 0.0
+    },
+    {
+      "noisy": "aahjero tsiikamentotsi iranaityaro abintaronts tontoricheki",
+      "gold": "aajero tsikamentotsi iramaityaro abintarontsi tontoricheki",
+      "predicted": "aajero tsikamentotsi iramaityaro abintarontsi tontoricheki",
+      "changed_tokens": 4,
+      "exact_match": true,
+      "cer_before": 0.06896551724137931,
+      "cer_after": 0.0
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "slug": "aumento-datos-seq2seq-attention-ya-syllable-yanesha46",
+  "source_zip": "aumento_datos.zip",
+  "language_code": "ya",
+  "language": "Yanesha'",
+  "family": "seq2seq-attention",
+  "variant": "syllable",
+  "run_dir": "aumento_datos/syllable_data/seq2seq+atencion/Yanesha46",
+  "weights_path": "aumento_datos/syllable_data/seq2seq+atencion/Yanesha46/model_ya_46_kd.h5",
+  "candidates_path": "aumento_datos/syllable_data/seq2seq+atencion/Yanesha46/candidatos.txt",
+  "reference_path": "aumento_datos/syllable_data/seq2seq+atencion/Yanesha46/referencia.txt",
+  "test_input_path": null,
+  "test_output_path": null,
+  "vocab_path": null,
+  "model_summary": {
+    "keras_version": "2.3.1",
+    "backend": "tensorflow",
+    "input_length": 46,
+    "encoder_input_dim": 29,
+    "decoder_input_dim": 30,
+    "lstm_units": 64,
+    "output_dim": 29,
+    "layer_names": [
+      "input_2",
+      "input_1",
+      "embedding_2",
+      "embedding_1",
+      "lstm_2",
+      "lstm_1",
+      "dot_1",
+      "atention",
+      "dot_2",
+      "concatenate_1",
+      "time_distributed_1",
+      "time_distributed_2"
+    ]
+  },
+  "extracted_files": {
+    "weights": "model_ya_46_kd.h5",
+    "candidates": "candidatos.txt",
+    "reference": "referencia.txt"
+  }
+}

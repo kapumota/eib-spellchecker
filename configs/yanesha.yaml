@@ -1,0 +1,22 @@
+language: ame
+alphabet: latin
+normalize:
+  lowercase: true
+  strip_accents: false
+data:
+  corpus_files:
+    - ../examples/demo_corpus.txt
+lexical:
+  min_frequency: 1
+  max_vocabulary_size: 50000
+  min_correction_length: 3
+  similarity_threshold: 0.7
+seq2seq:
+  enabled: false
+  hidden_size: 256
+  epochs: 5
+  batch_size: 64
+  validation_split: 0.1
+  error_rate: 0.3
+  reverse_input: true
+  sample_mode: argmax

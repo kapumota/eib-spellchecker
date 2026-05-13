@@ -1,0 +1,25 @@
+{
+  "model_type": "torch-hybrid-reranker",
+  "language": "demo",
+  "max_length": 12,
+  "chars": [
+    "<pad>",
+    "<unk>",
+    "a",
+    "e",
+    "i",
+    "j",
+    "k",
+    "n",
+    "o",
+    "t"
+  ],
+  "embedding_dim": 16,
+  "hidden_size": 24,
+  "candidate_limit": 6,
+  "min_correction_length": 3,
+  "similarity_threshold": 0.55,
+  "score_threshold": 0.45,
+  "weights_file": "model.pt",
+  "vocabulary_file": "vocabulary.json"
+}

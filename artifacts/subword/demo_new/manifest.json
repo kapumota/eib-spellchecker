@@ -1,0 +1,8 @@
+{
+  "artifact_version": "2",
+  "backend": "subword",
+  "language": "demo",
+  "entrypoint": "eib_spellchecker.modeling.subword:SubwordSpellChecker",
+  "payload_file": "model.json",
+  "metadata_file": null
+}

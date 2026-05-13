@@ -1,0 +1,35 @@
+{
+  "model_type": "subword",
+  "language": "demo",
+  "vocabulary": [
+    "jakon",
+    "nete",
+    "joi"
+  ],
+  "frequencies": {
+    "jakon": 3,
+    "nete": 3,
+    "joi": 2
+  },
+  "min_correction_length": 3,
+  "max_candidates": 16,
+  "min_ngram": 2,
+  "max_ngram": 4,
+  "jaccard_weight": 0.52,
+  "edit_weight": 0.33,
+  "frequency_weight": 0.15,
+  "score_threshold": 0.56,
+  "safety_policy": {
+    "enabled": true,
+    "protect_title_case": true,
+    "protect_all_caps": true,
+    "proper_name_threshold": 0.9,
+    "loanword_threshold": 0.92,
+    "out_of_domain_threshold": 0.93,
+    "abstain_margin": 0.08,
+    "max_unknown_char_ratio": 0.35,
+    "min_known_char_coverage": 0.45,
+    "score_boost_for_identity": 0.03,
+    "loanword_chars": "fwzqxvk"
+  }
+}

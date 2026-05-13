@@ -1,0 +1,101 @@
+Modelo seq2seq + atención simple
+
+Métricas
+
+CharacTER
+0.3448953498331435 --yine21
+0.2998968518543493 --yine31
+Yine46
+Carlo (syllables) = 0.19562585699510546
+Carlo (keyboard) = 0.17080579531865406
+Cesar = 0.20254147720616028
+
+0.4054436050275833 --sk21
+0.24155759231409765 --sk31
+Shipibo-konibo46
+Carlo (syllables) = 0.20784867728700793
+Carlo (keyboard) = 0.1123244338478411
+Cesar = 0.19372073718383126
+
+0.6823500612366157 --ashaninka21
+0.30185465151289725 --ashaninka31
+Ashaninka46
+Carlo (common + bpe 10k) = 0.10394349209791023
+Carlo (common + bpe 7.5k) = 0.11901843622233348
+Carlo (common + bpe 5k) = 0.13982223592266269
+Carlo (common + bpe 2.5k) = 0.17391747584755657
+Carlo (common) = 0.08262459053588239
+Carlo (keyboard) = 0.12858347028974712
+Cesar = 0.1802688038790208
+
+0.5197008468384772  --yanesha21
+0.24234720319826908  --yanesha31
+Yanesha46
+Carlo (common + syllables) = 0.18537159145849608
+Carlo (common + bpe 10k) = 0.07462141428394177
+Carlo (common + bpe 7.5k) = 0.07271603040880115
+Carlo (common + bpe 5k) = 0.08868553103887455
+Carlo (common + bpe 2.5k) = 0.12210893002049633
+Carlo (syllables) = 0.19440999315306176
+Carlo (common) = 0.1275530076873697
+Carlo (keyboard) = 0.14303639920815647
+Cesar = 0.21568366842247033
+
+BLEU
+0. 0--ashaninka21
+5.2  --ashaninka31
+Ashaninka46
+Carlo (common + bpe 10k) = 59.4
+Carlo (common + bpe 7.5k) = 55.8
+Carlo (common + bpe 5k) = 51.1
+Carlo (common + bpe 2.5k) = 45.9
+Carlo (common) = 39.7
+Carlo (keyboard) = 14.8
+Cesar = 12.4
+
+1.4 --sk21
+11.2 --sk31
+Shipibo-konibo46
+Carlo (syllables) = 11.3
+Carlo (keyboard) = 42.3
+Cesar = 18.5
+
+1.3 --yanesha21
+4.4 --yanesha31
+Yanesha46
+Carlo (common + syllables) = 50.4
+Carlo (common + bpe 10k) = 69.3
+Carlo (common + bpe 7.5k) = 70.4
+Carlo (common + bpe 5k) = 66.5
+Carlo (common + bpe 2.5k) = 60.6
+Carlo (syllables) = 6.3
+Carlo (common) = 32.4
+Carlo (keyboard) = 23.3
+Cesar = 6.9
+
+4.6 --yine21
+8.4 --yine31
+Yine46
+Carlo (syllables) = 4.1
+Carlo (keyboard) = 17.3
+Cesar = 15.2
+
+
+Accuracy
+0.8702 -- Yine21
+0.9139 -- yine31
+0.9606 -- yine46
+
+0.6688 -- Ashaninka21
+0.8966 -- Ashaninka31
+0.9532 -- Ashaninka46
+
+
+0.8597 mejor --sk21
+0.9299  --sk31
+0.9429 ---sk46
+
+
+0.8030 --yanesha21
+0.9209 --yanesha31
+0.9276 --yanesha46

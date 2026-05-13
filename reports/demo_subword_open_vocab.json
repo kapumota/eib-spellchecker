@@ -1,0 +1,52 @@
+{
+  "summary": {
+    "total_examples": 3,
+    "num_buckets": 2,
+    "artifact_backend": "SubwordSpellChecker"
+  },
+  "buckets": [
+    {
+      "name": "all",
+      "total": 3,
+      "exact_match_accuracy": 1.0,
+      "token_accuracy": 1.0,
+      "cer_improvement": 1.0
+    },
+    {
+      "name": "seen",
+      "total": 3,
+      "exact_match_accuracy": 1.0,
+      "token_accuracy": 1.0,
+      "cer_improvement": 1.0
+    }
+  ],
+  "examples": [
+    {
+      "noisy": "jakn",
+      "gold": "jakon",
+      "predicted": "jakon",
+      "gold_seen": true,
+      "proper_like": false,
+      "loanword_like": false,
+      "out_of_domain_like": false
+    },
+    {
+      "noisy": "nete",
+      "gold": "nete",
+      "predicted": "nete",
+      "gold_seen": true,
+      "proper_like": false,
+      "loanword_like": false,
+      "out_of_domain_like": false
+    },
+    {
+      "noisy": "joi",
+      "gold": "joi",
+      "predicted": "joi",
+      "gold_seen": true,
+      "proper_like": false,
+      "loanword_like": false,
+      "out_of_domain_like": false
+    }
+  ]
+}

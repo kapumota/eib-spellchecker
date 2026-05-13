@@ -1,0 +1,20 @@
+# Packaging
+build/
+dist/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Opcional: modelos / artefactos pesados
+# artifacts/
+# model_zoo/

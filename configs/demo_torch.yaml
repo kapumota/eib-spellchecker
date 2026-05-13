@@ -1,0 +1,29 @@
+language: demo
+alphabet: latin
+normalize:
+  lowercase: true
+  strip_accents: false
+data:
+  corpus_files:
+    - ../examples/demo_corpus.txt
+lexical:
+  min_frequency: 1
+  max_vocabulary_size: 50000
+  min_correction_length: 3
+  similarity_threshold: 0.7
+torch_reranker:
+  enabled: true
+  embedding_dim: 32
+  hidden_size: 48
+  epochs: 20
+  batch_size: 16
+  learning_rate: 0.003
+  validation_split: 0.2
+  max_length: 12
+  negatives_per_positive: 2
+  candidate_limit: 6
+  min_correction_length: 3
+  similarity_threshold: 0.55
+  score_threshold: 0.45
+  random_seed: 13
+  device: cpu

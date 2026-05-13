@@ -1,0 +1,29 @@
+language: ash
+alphabet: latin
+normalize:
+  lowercase: true
+  strip_accents: false
+data:
+  corpus_files:
+    - ../data/corpora/ash.txt
+lexical:
+  min_frequency: 1
+  max_vocabulary_size: 80000
+  min_correction_length: 3
+  similarity_threshold: 0.72
+torch_reranker:
+  enabled: true
+  embedding_dim: 48
+  hidden_size: 96
+  epochs: 6
+  batch_size: 128
+  learning_rate: 0.001
+  validation_split: 0.1
+  max_length: 24
+  negatives_per_positive: 3
+  candidate_limit: 8
+  min_correction_length: 3
+  similarity_threshold: 0.55
+  score_threshold: 0.45
+  random_seed: 13
+  device: auto
