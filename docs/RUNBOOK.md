@@ -1,13 +1,13 @@
-# Cómo correr el proyecto paso a paso
+### Cómo correr el proyecto paso a paso (v6)
 
-## 1. Descomprimir el proyecto
+#### 1. Descomprimir el proyecto
 
 ```bash
 unzip eib-spellchecker-v6.zip
 cd eib-spellchecker-v6
 ```
 
-## 2. Crear un entorno virtual
+#### 2. Crear o activar un entorno virtual
 
 ### Linux / macOS
 
@@ -16,14 +16,16 @@ python -m venv .venv
 source .venv/bin/activate
 ```
 
-### Windows PowerShell
+##### Windows PowerShell
 
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 ```
 
-## 3. Instalar dependencias
+> Si ya tienes un entorno activo, por ejemplo `eib`, no crees otro. Instala directamente dentro de ese entorno.
+
+#### 3. Instalar dependencias
 
 ```bash
 python -m pip install --upgrade pip
@@ -42,15 +44,15 @@ Opcional para TensorFlow/Keras legado:
 pip install -e .[tensorflow]
 ```
 
-## 4. Verificar instalación
+#### 4. Verificar instalación
 
 ```bash
 pytest
 ```
 
-## 5. Probar artefactos ya incluidos
+#### 5. Probar artefactos incluidos
 
-### Subword de demo
+##### Subword demostración
 
 ```bash
 python -m eib_spellchecker.cli correct \
@@ -58,7 +60,7 @@ python -m eib_spellchecker.cli correct \
   --text "jakn nete"
 ```
 
-### Torch moderno de demo
+##### Torch demo
 
 ```bash
 python -m eib_spellchecker.cli correct \
@@ -66,9 +68,18 @@ python -m eib_spellchecker.cli correct \
   --text "jakn nete"
 ```
 
-### Ver razones por token
+##### Lexical por idioma
 
-La salida incluye `reason` y `confidence`, por ejemplo:
+```bash
+python -m eib_spellchecker.cli correct \
+  --artifact-dir artifacts/lexical/ash \
+  --text "abiotero ojempeci"
+```
+
+#### 6. Interpretar razones por token
+
+La salida puede incluir:
+
 - `best-candidate`
 - `protected-proper-name`
 - `protected-loanword`
@@ -76,7 +87,9 @@ La salida incluye `reason` y `confidence`, por ejemplo:
 - `abstained-low-margin`
 - `in-vocabulary`
 
-## 6. Entrenar backend subword
+Estas señales ayudan a inspeccionar la política de abstención y el control de sobrecorrección.
+
+#### 7. Entrenar backend subword
 
 ```bash
 python -m eib_spellchecker.cli train-subword \
@@ -84,7 +97,7 @@ python -m eib_spellchecker.cli train-subword \
   --output-dir artifacts/subword/demo_new
 ```
 
-Luego probarlo:
+Probarlo:
 
 ```bash
 python -m eib_spellchecker.cli correct \
@@ -92,7 +105,7 @@ python -m eib_spellchecker.cli correct \
   --text "jakn nete"
 ```
 
-## 7. Entrenar backend torch moderno
+#### 8. Entrenar backend torch moderno
 
 ```bash
 python -m eib_spellchecker.cli train-torch-reranker \
@@ -101,7 +114,7 @@ python -m eib_spellchecker.cli train-torch-reranker \
   --output-dir artifacts/torch/demo_new
 ```
 
-## 8. Benchmark clásico
+#### 9. Benchmark clásico
 
 ```bash
 python -m eib_spellchecker.cli benchmark-csv \
@@ -110,9 +123,19 @@ python -m eib_spellchecker.cli benchmark-csv \
   --limit 200
 ```
 
-## 9. Benchmark de robustez
+#### 10. Benchmark agregado
 
-### A. Sobrecorrección sobre texto limpio
+```bash
+python -m eib_spellchecker.cli benchmark-suite \
+  --artifact-root artifacts/lexical \
+  --datasets-root data/samples/excels \
+  --limit 200 \
+  --output reports/suite_200.json
+```
+
+#### 11. Benchmark de robustez
+
+##### A. Sobrecorrección sobre texto limpio
 
 ```bash
 python -m eib_spellchecker.cli benchmark-clean \
@@ -120,7 +143,7 @@ python -m eib_spellchecker.cli benchmark-clean \
   --dataset examples/demo_corpus.txt
 ```
 
-### B. Seen vs unseen, nombres propios y préstamos probables
+##### B. Open vocabulary
 
 ```bash
 python -m eib_spellchecker.cli benchmark-open-vocab \
@@ -128,23 +151,37 @@ python -m eib_spellchecker.cli benchmark-open-vocab \
   --dataset examples/demo_pairs.tsv
 ```
 
-### C. Variantes de oración con `sentence + error_0..error_n`
+##### C. Variantes por oración
+
+Este comando requiere `sentence + error_0..error_n`.
 
 ```bash
 python -m eib_spellchecker.cli benchmark-sentence-variants \
   --artifact-dir artifacts/lexical/ash \
-  --dataset data/samples/excels/df_ash_sentences.csv \
+  --dataset data/samples/excels/df_ash.csv \
   --limit 100
 ```
 
-## 10. API
+> Usa `df_ash.csv`, `df_shi.csv`, `df_ya.csv` o `df_yi.csv`.
+> No uses `*_sentences.csv` para este benchmark.
+
+#### 12. API
+
+##### Linux / macOS
 
 ```bash
 export EIB_ARTIFACT_DIR=artifacts/subword/demo
 uvicorn eib_spellchecker.api:app --reload
 ```
 
-Probar:
+##### Windows PowerShell
+
+```powershell
+$env:EIB_ARTIFACT_DIR="artifacts/subword/demo"
+uvicorn eib_spellchecker.api:app --reload
+```
+
+Probar con curl:
 
 ```bash
 curl -X POST http://127.0.0.1:8000/correct \
@@ -152,16 +189,51 @@ curl -X POST http://127.0.0.1:8000/correct \
   -d '{"text":"jakn nete"}'
 ```
 
-## 11. Demo visual
+#### 13. Demostración visual
 
 ```bash
 python -m eib_spellchecker.cli gradio-demo \
   --artifact-dir artifacts/subword/demo
 ```
 
-## 12. Qué backend usar
+#### 14. Qué backend usar
 
 - `lexical`: baseline rápido y simple
 - `subword`: mejor primer paso para palabras nuevas y menos vocabulario cerrado
 - `torch-hybrid-reranker`: mejor cuando ya tienes pares `Input,Output`
 - `legacy-seq2seq`: solo para compatibilidad con investigación heredada
+
+#### 15. GitHub Actions
+
+Workflow recomendado:
+
+```yaml
+name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Upgrade pip
+        run: python -m pip install --upgrade pip
+      - name: Install package with extras
+        run: python -m pip install -e '.[dev,torch,demo,research]'
+      - name: Run tests
+        run: pytest
+```
+
+En `tests/test_torch_reranker.py`, conviene agregar:
+
+```python
+import pytest
+pytest.importorskip("torch", reason="PyTorch no está instalado; se omiten tests del backend torch")
+```
