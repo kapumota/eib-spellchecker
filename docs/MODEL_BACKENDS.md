@@ -1,54 +1,102 @@
-# Backends del proyecto
+### Backends del proyecto en v6
 
-## 1. lexical
+La plataforma usa una arquitectura **multibackend**: la interfaz de uso permanece estable, mientras que el mecanismo de corrección puede variar según el artefacto.
 
-Backend base en Python puro.
+#### 1. `lexical`
 
-**Ventajas**
-- rápido
-- simple
-- sin dependencias pesadas
-- útil para baseline y demo inmediata
+Backend base en Python puro, orientado a recuperación aproximada sobre vocabulario observado.
 
-**Límite**
-- depende mucho del vocabulario observado
-- no aprende a reranquear candidatos con pares supervisados
+##### Ventajas
+- rápido,
+- interpretable,
+- sin dependencias pesadas,
+- ideal para baseline, pruebas rápidas y demos inmediatas.
 
-## 2. torch-hybrid-reranker
+##### Límites
+- depende fuertemente de cobertura léxica,
+- maneja peor vocabulario abierto,
+- no reranquea candidatos usando supervisión emparejada.
 
-Backend moderno agregado en v5.
+##### Uso recomendado
+- baseline inicial,
+- comparación rápida,
+- despliegue ligero,
+- primeros benchmarks por idioma.
 
-**Idea**
-1. genera candidatos con el backend léxico
-2. representa palabra ruidosa y candidato a nivel de caracteres
-3. reranquea candidatos con una red en PyTorch
+#### 2. `subword`
 
-**Ventajas**
-- usa pares `Input,Output`
-- mantenible
-- no depende de TensorFlow
-- buena base para seguir hacia modelos más potentes
+Backend agregado y consolidado en v6. Usa subunidades derivadas de n-gramas de caracteres para reducir dependencia de vocabulario cerrado.
 
-**Uso recomendado**
-- entrenamiento moderno con CSV/TSV emparejados
-- demos más fuertes que el baseline léxico
-- ruta de evolución futura del proyecto
+#### Ventajas
+- mejor comportamiento ante OOV,
+- útil para palabras largas o morfológicamente complejas,
+- mejor primer paso hacia open-vocabulary corrección,
+- no requiere framework pesado.
 
-## 3. legacy-seq2seq
+#### Límites
+- no sustituye todavía un reranker contextual completo,
+- su ganancia depende de la calidad del vocabulario/subunidades observadas.
 
-Backend heredado en Keras/TensorFlow.
+#### Uso recomendado
+- robustez con palabras nuevas,
+- demos donde importa menos la dependencia a vocabulario exacto,
+- evaluación de sobrecorrección y open vocabulary.
 
-**Ventajas**
-- preserva compatibilidad con parte del trabajo anterior
-- permite empaquetar pesos `.h5` heredados cuando aplica
+#### 3. `torch-hybrid-reranker`
 
-**Límite**
-- pipeline más frágil
-- depende de TensorFlow
-- no siempre reproduce de forma limpia todos los experimentos viejos
+Backend moderno en PyTorch.
 
-## Recomendación práctica
+##### Idea
+1. genera candidatos con una base léxica,
+2. representa palabra ruidosa y candidato a nivel de caracteres,
+3. reranquea candidatos con una red en PyTorch.
 
-- usa `lexical` para baseline y arranque rápido
-- usa `torch-hybrid-reranker` para la versión moderna del proyecto
-- usa `legacy-seq2seq` solo cuando necesites conectar resultados históricos
+##### Ventajas
+- aprovecha pares `Input,Output`,
+- ruta moderna de evolución del proyecto,
+- no depende de TensorFlow,
+- buena base para futuros modelos más potentes.
+
+##### Límites
+- requiere PyTorch,
+- sigue siendo más costoso que `lexical`,
+- no es todavía un modelo contextual grande.
+
+#### Uso recomendado
+- entrenamiento moderno con CSV/TSV emparejados,
+- demos más fuertes que el baseline léxico,
+- experimentos orientados a mejora incremental supervisada.
+
+#### 4. `legacy-seq2seq`
+
+Backend heredado en TensorFlow/Keras.
+
+#### Ventajas
+- preserva compatibilidad con parte del trabajo anterior,
+- permite conectar con pesos `.h5` y experimentos históricos.
+
+#### Límites
+- pipeline más frágil,
+- dependencia de TensorFlow/Keras,
+- algunos experimentos antiguos no son portables de forma limpia.
+
+#### Uso recomendado
+- preservación del legado,
+- comparación histórica,
+- recuperación de resultados previos cuando aplica.
+
+#### Recomendación práctica
+
+- usa `lexical` para baseline y arranque rápido,
+- usa `subword` cuando quieras una ruta más robusta frente a OOV,
+- usa `torch-hybrid-reranker` cuando ya tengas pares supervisados y quieras una base moderna,
+- usa `legacy-seq2seq` solo cuando necesites conectar con investigación heredada.
+
+#### Perspectiva de evolución
+
+La arquitectura futura del proyecto apunta a combinaciones híbridas entre:
+
+- candidatos léxicos,
+- modelado carácter/subpalabra,
+- reranking contextual,
+- políticas explícitas de abstención.
