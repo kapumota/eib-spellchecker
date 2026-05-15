@@ -1,6 +1,6 @@
 ### eib-spellchecker v6
 
-**EIB-Spellchecker v6** es una plataforma de corrección ortográfica para lenguas de bajo recurso, diseñada como **software modular, instalable, testeable y desplegable**. La arquitectura del sistema sigue un enfoque **artifact-driven**, donde cada corrector se empaqueta como un artefacto autocontenido y puede ser consumido de forma uniforme desde CLI, API y demo visual.
+**EIB-Spellchecker v6** es una plataforma de corrección ortográfica para lenguas de bajo recurso, diseñada como **software modular, instalable, testeable y desplegable**. La arquitectura del sistema sigue un enfoque **artifact-driven**, donde cada corrector se empaqueta como un artefacto autocontenido y puede ser consumido de forma uniforme desde CLI, API y demostración visual.
 
 La versión actual incorpora una capa explícita de evaluación de **robustez**, una estrategia más orientada a **vocabulario abierto (open-vocabulary)** y mecanismos para reducir la **sobrecorrección** en tokens ya válidos.
 
@@ -47,7 +47,7 @@ La plataforma incorpora benchmarks específicos para:
 
 | Backend | Estado | Framework | Uso recomendado |
 |---|---|---|---|
-| `lexical` | estable | Python puro | baseline interpretable, baja dependencia, demo rápida |
+| `lexical` | estable | Python puro | baseline interpretable, baja dependencia, demostración rápida |
 | `subword` | estable en v6 | Python puro | vocabulario abierto, OOV, ruido menos controlado |
 | `torch-hybrid-reranker` | moderno | PyTorch | reranking sobre candidatos a partir de pares `Input,Output` |
 | `legacy-seq2seq` | experimental / compatibilidad | TensorFlow / Keras | preservación y comparación de experimentos heredados |
