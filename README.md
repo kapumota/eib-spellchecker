@@ -1,6 +1,6 @@
-### eib-spellchecker v6
+### eib-spellchecker
 
-**EIB-Spellchecker v6** es una plataforma de corrección ortográfica para lenguas de bajo recurso, diseñada como **software modular, instalable, testeable y desplegable**. La arquitectura del sistema sigue un enfoque **artifact-driven**, donde cada corrector se empaqueta como un artefacto autocontenido y puede ser consumido de forma uniforme desde CLI, API y demostración visual.
+**EIB-Spellchecker** es una plataforma de corrección ortográfica para lenguas de bajo recurso, diseñada como **software modular, instalable, testeable y desplegable**. La arquitectura del sistema sigue un enfoque **artifact-driven**, donde cada corrector se empaqueta como un artefacto autocontenido y puede ser consumido de forma uniforme desde CLI, API y demostración visual.
 
 La versión actual incorpora una capa explícita de evaluación de **robustez**, una estrategia más orientada a **vocabulario abierto (open-vocabulary)** y mecanismos para reducir la **sobrecorrección** en tokens ya válidos.
 
