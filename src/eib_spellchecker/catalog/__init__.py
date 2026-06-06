@@ -1,3 +1,6 @@
+# Codigo base de EIB Spellchecker.
+# Implementa componentes principales del paquete, la API, la CLI y los backends.
+
 from .legacy import inventory_from_zips
 from .excels import inventory_from_zip as inventory_excels_zip, parse_score_file, parse_score_text, summarize_scores
 

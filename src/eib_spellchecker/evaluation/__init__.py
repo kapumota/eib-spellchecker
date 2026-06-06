@@ -1,3 +1,6 @@
+# Codigo base de EIB Spellchecker.
+# Implementa componentes principales del paquete, la API, la CLI y los backends.
+
 from .metrics import BenchmarkResult, EvaluationResult, benchmark_artifact, evaluate_artifact
 from .robustness import benchmark_clean_corpus, benchmark_open_vocab, benchmark_sentence_variants
 
