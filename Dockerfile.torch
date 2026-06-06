@@ -1,11 +1,27 @@
+# Dockerfile.torch
+# Variante con soporte para PyTorch (instala dependencias extras [torch])
+
 FROM python:3.11-slim
 
+# Directorio de trabajo dentro del contenedor
 WORKDIR /app
+
+# Copiar archivos de configuración del proyecto
 COPY pyproject.toml README.md /app/
+
+# Copiar código fuente y artefactos necesarios
 COPY src /app/src
 COPY artifacts /app/artifacts
+
+# Instalar el paquete en modo editable con las dependencias de torch
+# Nota: .[torch] instala el paquete base + extras definidos en pyproject.toml
 RUN pip install --no-cache-dir -e .[torch]
 
+# Variable de entorno apuntando a los artefactos específicos de torch
 ENV EIB_ARTIFACT_DIR=/app/artifacts/torch/demo
+
+# Puerto expuesto para la API de uvicorn
 EXPOSE 8000
+
+# Iniciar el servidor ASGI con uvicorn
 CMD ["uvicorn", "eib_spellchecker.api:app", "--host", "0.0.0.0", "--port", "8000"]
