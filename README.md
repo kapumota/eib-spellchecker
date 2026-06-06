@@ -144,7 +144,7 @@ python -m eib_spellchecker.cli gradio-demo \
   --artifact-dir artifacts/subword/demo
 ```
 
-#### FastAPI / Swagger
+#### FastAPI/Swagger
 
 Linux/macOS:
 
