@@ -48,7 +48,7 @@ La plataforma incorpora benchmarks específicos para:
 | Backend | Estado | Framework | Uso recomendado |
 |---|---|---|---|
 | `lexical` | estable | Python puro | baseline interpretable, baja dependencia, demostración rápida |
-| `subword` | estable en v6 | Python puro | vocabulario abierto, OOV, ruido menos controlado |
+| `subword` | estable en v0.6 | Python puro | vocabulario abierto, OOV, ruido menos controlado |
 | `torch-hybrid-reranker` | moderno | PyTorch | reranking sobre candidatos a partir de pares `Input,Output` |
 | `legacy-seq2seq` | experimental / compatibilidad | TensorFlow / Keras | preservación y comparación de experimentos heredados |
 
@@ -179,7 +179,7 @@ La plataforma no se limita a medir exactitud puntual. Dependiendo del benchmark 
 
 #### Alcance actual
 
-La v6 representa una mejora importante en ingeniería y evaluación, especialmente en:
+La v0.6 representa una mejora importante en ingeniería y evaluación, especialmente en:
 
 - palabras nuevas no vistas,
 - nombres propios probables,
@@ -252,7 +252,7 @@ eib-spellchecker/
 
 #### Filosofía de evolución
 
-EIB-Spellchecker v6 debe entenderse como una plataforma en transición desde corrección ortográfica basada en ruido semi-controlado hacia un sistema más robusto de **open-vocabulary correction**. La dirección futura del proyecto prioriza:
+EIB-Spellchecker debe entenderse como una plataforma en transición desde corrección ortográfica basada en ruido semi-controlado hacia un sistema más robusto de **open-vocabulary correction**. La dirección futura del proyecto prioriza:
 
 - backends híbridos carácter + subpalabra,
 - reranking contextual liviano,
