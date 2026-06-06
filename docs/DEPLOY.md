@@ -1,4 +1,4 @@
-### Despliegue en v6
+### Despliegue en v0.6
 
 La v6 puede desplegarse como:
 
@@ -11,7 +11,7 @@ La selección del backend activo se realiza por artefacto, no por una clase hard
 
 #### 1. API
 
-#### Linux / macOS
+#### Linux/macOS
 
 ```bash
 export EIB_ARTIFACT_DIR=artifacts/subword/demo
