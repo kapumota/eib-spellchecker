@@ -1,3 +1,6 @@
+# Prueba automatizada de EIB Spellchecker.
+# Valida comportamiento funcional, regresiones o integracion del proyecto.
+
 from __future__ import annotations
 
 from eib_spellchecker.config import load_config

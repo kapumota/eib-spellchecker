@@ -1,3 +1,6 @@
+# Prueba automatizada de EIB Spellchecker.
+# Valida comportamiento funcional, regresiones o integracion del proyecto.
+
 from eib_spellchecker.catalog.excels import parse_score_text, summarize_scores
 
 

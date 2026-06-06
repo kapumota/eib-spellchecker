@@ -1,3 +1,6 @@
+# Prueba automatizada de EIB Spellchecker.
+# Valida comportamiento funcional, regresiones o integracion del proyecto.
+
 from pathlib import Path
 
 from fastapi.testclient import TestClient

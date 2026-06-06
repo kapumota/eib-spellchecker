@@ -1,3 +1,6 @@
+# Prueba automatizada de EIB Spellchecker.
+# Valida comportamiento funcional, regresiones o integracion del proyecto.
+
 from pathlib import Path
 
 from eib_spellchecker.data.pairs import load_pairs_auto, write_pairs_tsv
