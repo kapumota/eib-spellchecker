@@ -90,7 +90,7 @@ Para una lectura más útil de resultados:
 
 #### Recomendación de uso
 
-Para mostrar resultados de v6:
+Para mostrar resultados de v0.6:
 
 1. correr `benchmark-csv` sobre un dataset concreto,
 2. correr `benchmark-suite` para comparar ruido por idioma,
