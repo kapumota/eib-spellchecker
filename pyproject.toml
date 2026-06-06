@@ -5,11 +5,11 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "eib-spellchecker"
 version = "0.6.0"
-description = "Versión 6.0 del corrector ortográfico EIB con backend subword, políticas de seguridad, benchmark de robustez y guía completa de ejecución."
+description = "Corrector ortográfico EIB con backend subword, políticas de seguridad, benchmark de robustez y guía completa de ejecución."
 readme = "README.md"
 requires-python = ">=3.10"
 authors = [
-  { name = "OpenAI scaffold based on legacy EIB repository" }
+  { name = "César Lara Avila", email = "claraa@uni.edu.pe" }
 ]
 dependencies = [
   "fastapi>=0.111,<1.0",
