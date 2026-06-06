@@ -1,6 +1,6 @@
-### Benchmarking en v6
+### Benchmarking en v0.6
 
-La versión 6 amplía la evaluación clásica del proyecto y separa la medición en cuatro regímenes complementarios:
+La versión 0.6 amplía la evaluación clásica del proyecto y separa la medición en cuatro regímenes complementarios:
 
 1. **Evaluación supervisada clásica**
    - TSV con formato `noisy<TAB>gold`
