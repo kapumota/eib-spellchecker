@@ -1,3 +1,6 @@
+# Configuracion de EIB Spellchecker.
+# Archivo YAML usado para parametros, ejecucion, evaluacion o entrenamiento del proyecto.
+
 language: ya
 alphabet: latin
 normalize:
