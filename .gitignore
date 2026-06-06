@@ -15,6 +15,6 @@ Thumbs.db
 # Logs
 *.log
 
-# Opcional: modelos / artefactos pesados
+# Opcional: modelos/artefactos pesados
 # artifacts/
 # model_zoo/
