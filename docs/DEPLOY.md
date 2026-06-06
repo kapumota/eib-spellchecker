@@ -4,7 +4,7 @@ La v6 puede desplegarse como:
 
 - herramienta de línea de comandos,
 - API FastAPI,
-- demo visual con Gradio,
+- demostración visual con Gradio,
 - imagen Docker.
 
 La selección del backend activo se realiza por artefacto, no por una clase hardcodeada en el servicio. Esto sigue el enfoque **artifact-driven** del proyecto.
