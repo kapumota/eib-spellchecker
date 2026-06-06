@@ -1,3 +1,6 @@
+# Ejemplo de EIB Spellchecker.
+# Archivo auxiliar para demostraciones, pruebas manuales o datos de referencia.
+
 datasets:
   - language: Asháninka
     dataset: /absolute/path/common_data_ash.csv
