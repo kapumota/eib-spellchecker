@@ -1,4 +1,4 @@
-### Backends del proyecto en v6
+### Backends del proyecto en v0.6
 
 La plataforma usa una arquitectura **multibackend**: la interfaz de uso permanece estable, mientras que el mecanismo de corrección puede variar según el artefacto.
 
@@ -25,7 +25,7 @@ Backend base en Python puro, orientado a recuperación aproximada sobre vocabula
 
 #### 2. `subword`
 
-Backend agregado y consolidado en v6. Usa subunidades derivadas de n-gramas de caracteres para reducir dependencia de vocabulario cerrado.
+Backend agregado y consolidado en v0.6. Usa subunidades derivadas de n-gramas de caracteres para reducir dependencia de vocabulario cerrado.
 
 #### Ventajas
 - mejor comportamiento ante OOV,
