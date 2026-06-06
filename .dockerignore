@@ -1,7 +1,12 @@
+# Archivos y directorios de Python a ignorar
 __pycache__/
 *.pyc
 .pytest_cache/
 .venv/
+
+# Directorios de pruebas y documentación
 tests/
 docs/
+
+# Control de versiones
 .git/
