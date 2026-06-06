@@ -1,29 +1,22 @@
-### Cómo correr el proyecto paso a paso (v6)
+### Cómo correr el proyecto paso a paso (v0.6)
 
-#### 1. Descomprimir el proyecto
-
-```bash
-unzip eib-spellchecker-v6.zip
-cd eib-spellchecker-v6
-```
-
-#### 2. Crear o activar un entorno virtual
+#### 1. Crear o activar un entorno virtual
 
 ### Linux / macOS
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate
+python -m venv .eib
+source .eib/bin/activate
 ```
 
 ##### Windows PowerShell
 
 ```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
+python -m venv .eib
+.\.eib\Scripts\Activate.ps1
 ```
 
-> Si ya tienes un entorno activo, por ejemplo `eib`, no crees otro. Instala directamente dentro de ese entorno.
+> Si ya tienes un entorno activo, por ejemplo `.eib`, no crees otro. Instala directamente dentro de ese entorno.
 
 #### 3. Instalar dependencias
 
@@ -60,7 +53,7 @@ python -m eib_spellchecker.cli correct \
   --text "jakn nete"
 ```
 
-##### Torch demo
+##### Demostración de Torch 
 
 ```bash
 python -m eib_spellchecker.cli correct \
@@ -143,7 +136,7 @@ python -m eib_spellchecker.cli benchmark-clean \
   --dataset examples/demo_corpus.txt
 ```
 
-##### B. Open vocabulary
+##### B. Vocabulario abierto
 
 ```bash
 python -m eib_spellchecker.cli benchmark-open-vocab \
@@ -167,7 +160,7 @@ python -m eib_spellchecker.cli benchmark-sentence-variants \
 
 #### 12. API
 
-##### Linux / macOS
+##### Linux/macOS
 
 ```bash
 export EIB_ARTIFACT_DIR=artifacts/subword/demo
