@@ -1,10 +1,6 @@
 ### Migración histórica desde el repositorio legado
 
-Este documento conserva la trazabilidad de la transición desde el repositorio original de investigación hacia la plataforma modular actual.
-
-#### Propósito
-
-La migración no fue un simple cambio de carpetas. El objetivo fue pasar de una estructura basada en notebooks, scripts sueltos y dependencias implícitas hacia una plataforma con:
+Este documento conserva la trazabilidad de la transición desde el repositorio original de investigación hacia la plataforma modular actual. Una plataforma que tiene:
 
 - backends intercambiables,
 - artefactos versionables,
