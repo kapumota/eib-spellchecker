@@ -1,3 +1,6 @@
+# Script auxiliar de EIB Spellchecker.
+# Mantiene tareas de importacion, migracion o mantenimiento del proyecto.
+
 from __future__ import annotations
 
 import argparse
