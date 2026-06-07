@@ -1,5 +1,14 @@
 ### eib-spellchecker
 
+[![CI](https://github.com/kapumota/eib-spellchecker/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/kapumota/eib-spellchecker/actions/workflows/ci.yml)
+[![release](https://img.shields.io/github/v/release/kapumota/eib-spellchecker?label=release)](https://github.com/kapumota/eib-spellchecker/releases)
+[![license](https://img.shields.io/github/license/kapumota/eib-spellchecker)](LICENSE)
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python)
+![tests](https://img.shields.io/badge/tests-pytest-brightgreen)
+![API](https://img.shields.io/badge/API-FastAPI-teal)
+![demo](https://img.shields.io/badge/demo-Gradio-blue)
+![validation](https://img.shields.io/badge/validation-tests%20%2B%20CLI%20%2B%20benchmarks-brightgreen)
+
 **EIB Spellchecker** es una plataforma de corrección ortográfica para lenguas de bajo recurso. Está diseñada como software modular, instalable, testeable y desplegable. Su arquitectura usa un enfoque de **despliegue guiado por artefactos**, donde cada corrector se empaqueta como un artefacto autocontenido y puede ser consumido de forma uniforme desde la línea de comandos, una API web o una demostración visual.
 
 La versión actual `0.6.0` incorpora evaluación explícita de robustez, una estrategia orientada a **vocabulario abierto** y mecanismos para reducir la **sobrecorrección** en tokens que ya son válidos.
@@ -235,6 +244,26 @@ El sistema todavía no equivale a una solución de generalización abierta total
 * calibración más fina de confianza y abstención,
 * reordenamiento contextual más fuerte sobre candidatos,
 * comparación sistemática entre backends lexicales, subléxicos y neuronales.
+
+
+
+### Validación reproducible del software
+
+El proyecto se valida mediante un flujo reproducible conectado al badge de CI. El workflow `.github/workflows/ci.yml` ejecuta el script principal:
+
+```bash
+make validate
+```
+
+Este proceso comprueba instalación del paquete, pruebas automatizadas, importación de la API, ejecución del CLI de corrección y benchmarks mínimos con los artefactos de demostración.
+
+La validación local también puede ejecutarse con:
+
+```bash
+bash scripts/validate.sh
+```
+
+El objetivo de esta sección es que los badges del README no sean solo decorativos: deben representar una validación ejecutable del software.
 
 ### CI recomendado
 
