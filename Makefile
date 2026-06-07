@@ -25,3 +25,18 @@ train-demo-torch:
 
 benchmark-demo:
 	python -m eib_spellchecker.cli benchmark-csv --artifact-dir $(ARTIFACT) --dataset $(DATASET) --limit 100
+.PHONY: validate clean
+
+validate:
+	bash scripts/validate.sh
+
+clean:
+	find . -type d -name "__pycache__" -prune -exec rm -rf {} +
+	find . -type f -name "*.pyc" -delete
+	find . -type d -name ".pytest_cache" -prune -exec rm -rf {} +
+	find . -type d -name ".mypy_cache" -prune -exec rm -rf {} +
+	find . -type d -name ".ruff_cache" -prune -exec rm -rf {} +
+	find . -type d -name "htmlcov" -prune -exec rm -rf {} +
+	find . -type d -name "build" -prune -exec rm -rf {} +
+	find . -type d -name "dist" -prune -exec rm -rf {} +
+	find . -type d -name "*.egg-info" -prune -exec rm -rf {} +
