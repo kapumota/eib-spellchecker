@@ -90,21 +90,40 @@ model_zoo/legacy_runs
 
 ### Instalación rápida
 
+Linux/macOS:
+
 ```bash
-python -m venv .eib
+python3 -m venv .eib
 source .eib/bin/activate
 python -m pip install --upgrade pip
-pip install -e .[dev,demo,torch,research]
+python -m pip install -e '.[dev,demo,torch,research]'
 ```
 
-En Windows PowerShell:
+Windows PowerShell:
 
 ```powershell
 python -m venv .eib
 .\.eib\Scripts\Activate.ps1
 python -m pip install --upgrade pip
-pip install -e .[dev,demo,torch,research]
+python -m pip install -e '.[dev,demo,torch,research]'
 ```
+
+#### Ejecución dentro del entorno `.eib`
+
+Los comandos deben ejecutarse desde la raíz del repositorio con el entorno virtual activado:
+
+```bash
+cd ~/eib-spellchecker
+source .eib/bin/activate
+```
+
+La terminal debería mostrar algo parecido a:
+
+```text
+(.eib) project@kapumota:~/eib-spellchecker$
+```
+
+El directorio `.eib/` es un entorno local y no debe subirse al repositorio. Debe permanecer registrado en `.gitignore`.
 
 ### Flujo mínimo de uso
 
@@ -182,36 +201,85 @@ Nota: para este benchmark deben usarse archivos como `df_ash.csv`, `df_shi.csv`,
 
 ### API y demostración visual
 
-#### Demostración con Gradio
-
-```bash
-python -m eib_spellchecker.cli gradio-demo \
-  --artifact-dir artifacts/subword/demo
-```
-
-
 #### Plataforma visual con Gradio
 
-La plataforma incluye una demostracion interactiva construida con Gradio. Esta interfaz permite probar un artefacto de correccion ortografica sin escribir codigo adicional.
+La plataforma incluye una demostración interactiva construida con Gradio. Esta interfaz permite probar artefactos de corrección ortográfica desde el navegador y observar el resultado corregido, el detalle por token y un resumen gráfico del proceso.
 
-![Demo visual de eib-spellchecker](docs/images/gradio-demo.svg)
+#### Demostración visual real
 
-#### Demostracion basica con Gradio
+![Demostración real de eib-spellchecker](docs/gif/eib-spellchecker-demo.gif)
+
+#### Qué muestra la interfaz
+
+La demostración permite revisar:
+
+* el artefacto cargado,
+* el idioma reportado por el `manifest.json`,
+* el backend usado durante la inferencia,
+* ejemplos precargados según el artefacto,
+* el texto de entrada,
+* el texto corregido,
+* el detalle por token,
+* la razón de cada decisión cuando está disponible,
+* la confianza de la corrección cuando el backend la reporta,
+* un gráfico con tokens conservados y tokens corregidos.
+
+#### Ejecución con artefacto de demostración
+
+El siguiente comando carga el artefacto de demostración subword:
 
 ```bash
 python -m eib_spellchecker.cli gradio-demo \
   --artifact-dir artifacts/subword/demo
 ```
 
-La aplicacion queda disponible localmente en:
+En este caso la interfaz mostrará:
 
 ```text
-http://127.0.0.1:7860
+Idioma mostrado: Demo
+Código interno de idioma: demo
+Backend en ejecución: SubwordSpellChecker
 ```
 
-#### Demostracion con graficos de evaluacion
+Esto es correcto. El artefacto `artifacts/subword/demo` sirve para probar la interfaz y el backend subword de demostración. No representa directamente una lengua real del conjunto EIB.
 
-Primero genera los reportes JSON:
+#### Ejecución con lenguas reales
+
+Para probar artefactos por lengua, usar alguno de los artefactos lexicales incluidos en el proyecto.
+
+Ashaninka:
+
+```bash
+python -m eib_spellchecker.cli gradio-demo \
+  --artifact-dir artifacts/lexical/ash
+```
+
+Shipibo-Konibo:
+
+```bash
+python -m eib_spellchecker.cli gradio-demo \
+  --artifact-dir artifacts/lexical/shi
+```
+
+Yanesha:
+
+```bash
+python -m eib_spellchecker.cli gradio-demo \
+  --artifact-dir artifacts/lexical/ya
+```
+
+Yine:
+
+```bash
+python -m eib_spellchecker.cli gradio-demo \
+  --artifact-dir artifacts/lexical/yi
+```
+
+#### Reportes opcionales para gráficos
+
+La interfaz puede cargar reportes JSON para mostrar gráficos adicionales de benchmark y vocabulario abierto.
+
+Primero se pueden generar reportes de ejemplo:
 
 ```bash
 mkdir -p reports
@@ -227,7 +295,7 @@ python -m eib_spellchecker.cli benchmark-open-vocab \
   --output reports/subword_demo_open_vocab.json
 ```
 
-Luego levanta la plataforma visual con graficos:
+Luego se puede levantar Gradio usando esos reportes:
 
 ```bash
 python -m eib_spellchecker.cli gradio-demo \
@@ -236,8 +304,7 @@ python -m eib_spellchecker.cli gradio-demo \
   --open-vocab-report reports/subword_demo_open_vocab.json
 ```
 
-La interfaz muestra el texto original, el texto corregido, los cambios por token, un grafico de tokens corregidos frente a tokens conservados y graficos derivados de reportes JSON cuando estan disponibles.
-
+Si no se pasan reportes, la interfaz sigue funcionando. En ese caso mostrará una indicación en las pestañas de benchmark y vocabulario abierto explicando cómo generar los archivos JSON.
 
 #### API con FastAPI y Swagger
 
@@ -294,8 +361,6 @@ El sistema todavía no equivale a una solución de generalización abierta total
 * calibración más fina de confianza y abstención,
 * reordenamiento contextual más fuerte sobre candidatos,
 * comparación sistemática entre backends lexicales, subléxicos y neuronales.
-
-
 
 ### Validación reproducible del software
 
@@ -359,6 +424,7 @@ eib-spellchecker/
 ├── configs/
 ├── data/
 ├── docs/
+│   └── gif/
 ├── examples/
 ├── model_zoo/legacy_runs/
 ├── reports/
@@ -394,6 +460,10 @@ Contiene archivos pequeños de ejemplo para demostraciones, pruebas manuales y e
 #### `reports/`
 
 Contiene reportes JSON de evaluación y benchmarks.
+
+#### `docs/gif/`
+
+Contiene evidencia visual de la plataforma, incluyendo el GIF real de la demostración Gradio usado en el README.
 
 #### `model_zoo/legacy_runs/`
 
