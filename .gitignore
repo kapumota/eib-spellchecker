@@ -18,3 +18,11 @@ Thumbs.db
 # Opcional: modelos/artefactos pesados
 # artifacts/
 # model_zoo/
+
+# Entorno virtual local
+.eib/
+
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/

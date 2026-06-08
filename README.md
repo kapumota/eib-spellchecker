@@ -189,6 +189,56 @@ python -m eib_spellchecker.cli gradio-demo \
   --artifact-dir artifacts/subword/demo
 ```
 
+
+#### Plataforma visual con Gradio
+
+La plataforma incluye una demostracion interactiva construida con Gradio. Esta interfaz permite probar un artefacto de correccion ortografica sin escribir codigo adicional.
+
+![Demo visual de eib-spellchecker](docs/images/gradio-demo.svg)
+
+#### Demostracion basica con Gradio
+
+```bash
+python -m eib_spellchecker.cli gradio-demo \
+  --artifact-dir artifacts/subword/demo
+```
+
+La aplicacion queda disponible localmente en:
+
+```text
+http://127.0.0.1:7860
+```
+
+#### Demostracion con graficos de evaluacion
+
+Primero genera los reportes JSON:
+
+```bash
+mkdir -p reports
+
+python -m eib_spellchecker.cli benchmark-csv \
+  --artifact-dir artifacts/subword/demo \
+  --dataset examples/demo_pairs.tsv \
+  --output reports/subword_demo_benchmark.json
+
+python -m eib_spellchecker.cli benchmark-open-vocab \
+  --artifact-dir artifacts/subword/demo \
+  --dataset examples/demo_pairs.tsv \
+  --output reports/subword_demo_open_vocab.json
+```
+
+Luego levanta la plataforma visual con graficos:
+
+```bash
+python -m eib_spellchecker.cli gradio-demo \
+  --artifact-dir artifacts/subword/demo \
+  --benchmark-report reports/subword_demo_benchmark.json \
+  --open-vocab-report reports/subword_demo_open_vocab.json
+```
+
+La interfaz muestra el texto original, el texto corregido, los cambios por token, un grafico de tokens corregidos frente a tokens conservados y graficos derivados de reportes JSON cuando estan disponibles.
+
+
 #### API con FastAPI y Swagger
 
 Linux/macOS:

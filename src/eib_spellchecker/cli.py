@@ -140,6 +140,8 @@ def build_parser() -> argparse.ArgumentParser:
 
     demo_parser = subparsers.add_parser("gradio-demo", help="Levanta una demo visual con Gradio.")
     demo_parser.add_argument("--artifact-dir", required=True)
+    demo_parser.add_argument("--benchmark-report", default=None)
+    demo_parser.add_argument("--open-vocab-report", default=None)
 
     return parser
 
@@ -355,7 +357,11 @@ def command_score_report(args: argparse.Namespace) -> int:
 
 
 def command_gradio_demo(args: argparse.Namespace) -> int:
-    launch_demo(args.artifact_dir)
+    launch_demo(
+        args.artifact_dir,
+        benchmark_report=args.benchmark_report,
+        open_vocab_report=args.open_vocab_report,
+    )
     return 0
 
 
